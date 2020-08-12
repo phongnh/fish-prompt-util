@@ -1,4 +1,4 @@
-function git_repo_info
+function git_repo_with_short_branch_info
     if git_is_repo
         echo -n -s ' (' (git_short_branch_name)
 
