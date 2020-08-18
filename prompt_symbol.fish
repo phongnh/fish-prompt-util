@@ -1,12 +1,9 @@
 function prompt_symbol
-    if test (count $argv) -eq 0
-        set argv '$' '!'
-    else if test (count $argv) -eq 1
-        set argv[2] '!'
-    end
     if test $status -eq 0
+        test -z $argv[1] ;and set argv[1] '$'
         echo -n -s $argv[1] ' '
     else
+        test -z $argv[2] ;and set argv[2] '!'
         echo -n -s $argv[2] ' '
     end
 end
